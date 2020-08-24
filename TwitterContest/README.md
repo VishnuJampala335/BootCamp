@@ -46,7 +46,7 @@ The types.go file in the types package consists of the definitions of various st
   This package is used to handle database connection and to post or retrieve data from MySQl
   
   
-  ## To run the application using docker
+## To run the application using docker
 * Requirements : `Docker`
 * ### RUN `docker build --tag twittercontest .`
 * ### RUN `docker run -it -p 8080:8080 twittercontest`
