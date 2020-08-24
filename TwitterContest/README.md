@@ -46,16 +46,16 @@
   This package is used to handle database connection and to post or retrieve data from MySQl
   
   
-## To run the application using docker
+### To run the application using docker
  * Requirements : `Docker`
- * ### RUN `docker build --tag twittercontest .`
- * ### RUN `docker run -it -p 8080:8080 twittercontest`
+ * #### RUN `docker build --tag twittercontest .`
+ * #### RUN `docker run -it -p 8080:8080 twittercontest`
  * The Application is up and is running at [localhost:8080](http://localhost:8080)   
 
-## To run the application locally
+### To run the application locally
  * Requirements : `Golang`
 
  * `cd` to the root directory
- * ### RUN  `go mod download`
- * ### RUN  `go run main.go`
+ * #### RUN  `go mod download`
+ * #### RUN  `go run main.go`
  * The Application is up and is running at [localhost:8080](http://localhost:8080) 
