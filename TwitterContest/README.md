@@ -2,7 +2,7 @@
 
 ## Setup Instructions:
 
-- Packages required to run the app: 
+ - Packages required to run the app: 
   ```go
    go get  "github.com/dghubble/go-twitter/twitter"
    go get  "github.com/gin-gonic/gin"
@@ -15,13 +15,13 @@
   
 ## Prerequisites
 
-You need to install the following software before using this API
+ You need to install the following software before using this API
 
-```
-Mysql
-Golang
-Postman
-```
+ ```
+ Mysql
+ Golang
+ Postman
+ ```
 ## Endpoints:
 - ```sh
   GET /twitter/retweets/:user_handle/max  
@@ -34,28 +34,28 @@ Postman
   Prints out the latest tweets of a given Twitter Handle
 
 ## Sending request to the Api
-Use Postman to send the request by providing the ConsumerKey and ConsumerSecret as header in Postman
+ Use Postman to send the request by providing the ConsumerKey and ConsumerSecret as header in Postman
 
 ## Project Structure
-The project has three packages apart from main
-- **types**  
-The types.go file in the types package consists of the definitions of various structs
-- **tasks**  
+ The project has three packages apart from main
+ - **types**  
+  The types.go file in the types package consists of the definitions of various structs
+ - **tasks**  
   The tasks package consists of logic to handle various endpoints and authentication(client.go)
-- **db**  
+ - **db**  
   This package is used to handle database connection and to post or retrieve data from MySQl
   
   
 ## To run the application using docker
-* Requirements : `Docker`
-* ### RUN `docker build --tag twittercontest .`
-* ### RUN `docker run -it -p 8080:8080 twittercontest`
-* The Application is up and is running at [localhost:8080](http://localhost:8080)   
+ * Requirements : `Docker`
+ * ### RUN `docker build --tag twittercontest .`
+ * ### RUN `docker run -it -p 8080:8080 twittercontest`
+ * The Application is up and is running at [localhost:8080](http://localhost:8080)   
 
 ## To run the application locally
-* Requirements : `Golang`
+ * Requirements : `Golang`
 
-* `cd` to the root directory
-* ### RUN  `go mod download`
-* ### RUN  `go run main.go`
-* The Application is up and is running at [localhost:8080](http://localhost:8080) 
+ * `cd` to the root directory
+ * ### RUN  `go mod download`
+ * ### RUN  `go run main.go`
+ * The Application is up and is running at [localhost:8080](http://localhost:8080) 
