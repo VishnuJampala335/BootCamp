@@ -3,7 +3,6 @@ package tasks
 import (
 	"TwitterContest/db"
 	"fmt"
-	"log"
 	"net/http"
 	"strconv"
 	"sync"
@@ -12,8 +11,6 @@ import (
 
 	"github.com/dghubble/go-twitter/twitter"
 	"github.com/gin-gonic/gin"
-	"golang.org/x/oauth2"
-	"golang.org/x/oauth2/clientcredentials"
 )
 
 var user models.User
@@ -25,25 +22,6 @@ func retweets(id int, tweetID int64, client *twitter.Client, count *map[string]i
 	for _, retweet := range retweets {
 		(*count)[retweet.User.Name] = (*count)[retweet.User.Name] + 1
 	}
-}
-
-func getClient(flags models.FlagsAuth) *twitter.Client {
-
-	if flags.ConsumerKey == "" || flags.ConsumerSecret == "" {
-		log.Fatal("Application Access Token required")
-	}
-	// oauth2 configures a client that uses app credentials to keep a fresh token
-	config := &clientcredentials.Config{
-		ClientID:     flags.ConsumerKey,
-		ClientSecret: flags.ConsumerSecret,
-		TokenURL:     "https://api.twitter.com/oauth2/token",
-	}
-	// http.Client will automatically authorize Requests
-	httpClient := config.Client(oauth2.NoContext)
-	// Twitter client
-	client := twitter.NewClient(httpClient)
-
-	return client
 }
 
 func Winner(c *gin.Context) {
