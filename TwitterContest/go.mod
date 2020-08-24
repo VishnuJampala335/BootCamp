@@ -1,4 +1,4 @@
-module twittercontest
+module TwitterContest
 
 go 1.15
 
