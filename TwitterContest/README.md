@@ -12,3 +12,16 @@
    go get  "golang.org/x/oauth2"
    go get  "golang.org/x/oauth2/clientcredentials"
   ```
+  
+## Prerequisites
+
+You need to install the following software before using this API
+
+```
+Mysql
+Golang
+Postman
+```
+
+## Sending request to the Api
+Use Postman to send the request by providing the ConsumerKey and ConsumerSecret as header
