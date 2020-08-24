@@ -24,4 +24,13 @@ Postman
 ```
 
 ## Sending request to the Api
-Use Postman to send the request by providing the ConsumerKey and ConsumerSecret as header
+Use Postman to send the request by providing the ConsumerKey and ConsumerSecret as header in Postman
+
+## Project Structure
+The project has three packages apart from main
+- **types**  
+The types.go file in the types package consists of the definitions of various structs
+- **tasks**  
+  The tasks package consists of logic to handle various endpoints and authentication(client.go)
+- **db**  
+  This package is used to handle database connection and to post or retrieve data from MySQl
